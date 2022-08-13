@@ -7,4 +7,16 @@ function solution(str) {
 }
 
 let str = ["teacher", "time", "student", "beautiful", "gooooooood"];
-console.log(solution(str));
+console.log(solution2(str));
+
+function solution2(str) {
+  let answer,
+    max = Number.MIN_SAFE_INTEGER;
+  for (let x of str) {
+    if (x.length > max) {
+      max = x.length;
+      answer = x;
+    }
+  }
+  return answer;
+}
